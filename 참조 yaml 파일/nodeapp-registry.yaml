@@ -1,0 +1,10 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: nodeapp
+  namespace: flux-system
+spec:
+  secretRef:
+    name: ecr-credentials
+  image: 242337484181.dkr.ecr.ap-northeast-2.amazonaws.com/nodeapp
+  interval: 1m0s

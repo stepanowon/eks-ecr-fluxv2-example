@@ -1,1 +1,1 @@
-# eks-ecr-fluxv2-example
+# eks-ecr-fluxv2-example 예제

@@ -1,0 +1,24 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: flux-system
+  namespace: flux-system
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: flux-system                 #gotk-sync.yaml에 있는 git repository 개체 지정
+  interval: 1m0s
+  update:
+    path: ./                          #k8s-infra 리포지토리 경로(./)에서 flux-system과 앱 yaml을 포함하고 있는 경로 지정
+    strategy: Setters
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        name: fluxcdbot
+        email: stepanowon@gmail.com
+      messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
+    push:
+      branch: main
