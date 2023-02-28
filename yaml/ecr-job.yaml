@@ -31,7 +31,7 @@ metadata:
   name: ecr-credentials-sync
   namespace: flux-system
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::242337484181:role/FluxECRAccess
+    eks.amazonaws.com/role-arn: arn:aws:iam::<your-acct-id>:role/FluxECRAccess
 ---
 apiVersion: batch/v1beta1
 kind: CronJob
@@ -59,7 +59,7 @@ spec:
             imagePullPolicy: IfNotPresent
             env:
             - name: REGION
-              value: ap-northeast-2
+              value: <your-region>
             volumeMounts:
             - mountPath: /token
               name: token
@@ -75,7 +75,7 @@ spec:
             - name: SECRET_NAME
               value: ecr-credentials
             - name: ECR_REGISTRY
-              value: 242337484181.dkr.ecr.ap-northeast-2.amazonaws.com 
+              value: <your-acct-id>.dkr.ecr.ap-northeast-2.amazonaws.com 
             volumeMounts:
             - mountPath: /token
               name: token

@@ -18,7 +18,7 @@ spec:
     commit:
       author:
         name: fluxcdbot
-        email: stepanowon@gmail.com
+        email: <your-email>
       messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
     push:
       branch: main

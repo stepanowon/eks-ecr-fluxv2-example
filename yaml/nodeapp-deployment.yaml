@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: eks-example
-        image: 242337484181.dkr.ecr.ap-northeast-2.amazonaws.com/nodeapp:1.0.0 # {"$imagepolicy": "flux-system:nodeapp"}
+        image: <your-acct-id>.dkr.ecr.<your-region>.amazonaws.com/nodeapp:1.0.0 # {"$imagepolicy": "flux-system:nodeapp"}
         imagePullPolicy: Always
         ports:
         - containerPort: 80

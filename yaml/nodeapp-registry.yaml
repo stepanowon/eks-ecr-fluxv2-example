@@ -6,5 +6,5 @@ metadata:
 spec:
   secretRef:
     name: ecr-credentials
-  image: 242337484181.dkr.ecr.ap-northeast-2.amazonaws.com/nodeapp
+  image: <your-acct-id>.dkr.ecr.<your-region>.amazonaws.com/nodeapp
   interval: 1m0s
