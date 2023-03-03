@@ -6,8 +6,8 @@
 ### [적용 가이드 영상](https://www.youtube.com/watch?v=Usvnt6DGj_4&list=PLv4e0riJxKefDJl925XrK5ghiI5yH1QG2&index=1)
 
 ## 참조
-* https://github.com/antonputra/tutorials/tree/main/lessons/061 
 * https://fluxcd.io/
 * https://docs.aws.amazon.com/ko_kr/codecommit/latest/userguide/setting-up-ssh-unixes.html
 * https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/iam-roles-for-service-accounts.html
+* https://github.com/antonputra/tutorials
 
